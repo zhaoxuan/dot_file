@@ -29,3 +29,9 @@ map <c-j> <c-f>
 
 " Map Ctrl-k to Ctrl-b (page up)
 map <c-k> <c-b>
+
+" Set ignorecase when searching
+set ignorecase
+
+" Set no flickering cursor
+set gcr=a:block-blinkon0
