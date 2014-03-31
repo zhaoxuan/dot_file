@@ -16,6 +16,10 @@ set formatoptions=tcqmM
 
 syntax on
 colorscheme molokai
+
+" To enable 256 colors in vim
+set t_Co=256
+
 "set number
 set cindent
 set expandtab
