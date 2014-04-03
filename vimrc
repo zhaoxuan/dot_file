@@ -66,6 +66,15 @@ map <c-k> <c-b>
 " Set no flickering cursor
 set gcr=a:block-blinkon0
 
+" To move to head of line
+" Insert Mode Ctrl-a
+imap <C-a> <C-o>^
+
+" To move to end of line
+" Insert Mode Ctrl-e
+imap <C-e> <C-o>$
+
+
 " ==========Begin==========
 " Code comments plugin:
 " Description:
@@ -138,10 +147,6 @@ inoremap <expr> <CR>       pumvisible() ? "\<C-y>" : "\<CR>"
 "     :Ack search_string
 " ==========End==========
 
-
-
-imap <C-a> <C-o>^
-imap <C-e> <C-o>$
 
 
 
