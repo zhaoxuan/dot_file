@@ -67,18 +67,18 @@ map <c-k> <c-b>
 set gcr=a:block-blinkon0
 
 " ==========Begin==========
-" Code comments plugin
+" Code comments plugin:
 " Description:
 " Visual Mode \cc add comments
 " Visual Mode \cu delete comments
 " ==========End==========
 
 " ==========Begin==========
-" Indent Settings
+" Indent Settings:
 "
 " Insert Mode
-"     Ctrl+t Right indent
-"     Ctrl+d Left indent
+"     Ctrl-t Right indent
+"     Ctrl-d Left indent
 "
 " Command Mode
 "     >> Left indent
@@ -93,20 +93,20 @@ set gcr=a:block-blinkon0
 " ==========End==========
 
 " ==========Begin==========
-" Close/Open MarchParen
+" Close/Open MarchParen:
 " NoMatchParen
 " DoMatchParen
 " ==========End==========
 
 " ==========Begin==========
-" Autocomplete
+" Autocomplete:
 "
 " Description:
 "
 " Insert Mode
 "     Ctrl-n or Ctrl-p
 "
-" Omni Complete
+" Omni Complete:
 " Description:
 "
 " Insert Mode
@@ -115,6 +115,36 @@ set gcr=a:block-blinkon0
 " Use enter to select current in complete mode
 inoremap <expr> <CR>       pumvisible() ? "\<C-y>" : "\<CR>"
 " ==========End==========
+
+" ==========Begin========
+" Split Window:
+"
+" Description:
+"     Ctrl-w Ctrl-v To split Left/Right windows
+"     Ctrl-w Ctrl-w To move next window
+"     Ctrl-w Ctrl-l To move right window
+"     Ctrl-w Ctrl-h To move left window
+" ==========End==========
+
+" ==========Begin========
+" Bufexplorer:
+" Description:
+"     \be Browse bufexplorer
+" ==========End==========
+
+" ==========Begin========
+" Ack:
+" Description:Plugin that integrates ack with Vim
+"     :Ack search_string
+" ==========End==========
+
+
+
+imap <C-a> <C-o>^
+imap <C-e> <C-o>$
+
+
+
 
 
 
