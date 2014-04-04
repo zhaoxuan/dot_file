@@ -49,7 +49,8 @@ set ffs=unix,dos,mac
 set ignorecase
 
 " Force save current file with root permission
-map <leader>sudosave :w !sudo tee %
+" map <leader>sudosave :w !sudo tee %
+cmap w!! w !sudo tee %
 
 " Map Ctrl-l to w (next word)
 map <c-l> w
