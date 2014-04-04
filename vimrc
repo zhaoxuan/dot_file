@@ -74,9 +74,12 @@ imap <C-a> <C-o>^
 " Insert Mode Ctrl-e
 imap <C-e> <C-o>$
 
+" To change vim mode
+set backspace=indent,eol,start
+
 
 " ==========Begin==========
-" Code comments plugin:
+" Code Comments Plugin:
 " Description:
 " Visual Mode \cc add comments
 " Visual Mode \cu delete comments
@@ -102,7 +105,7 @@ imap <C-e> <C-o>$
 " ==========End==========
 
 " ==========Begin==========
-" Close/Open MarchParen:
+" Close Open MarchParen:
 " NoMatchParen
 " DoMatchParen
 " ==========End==========
