@@ -52,6 +52,10 @@ set ignorecase
 " map <leader>sudosave :w !sudo tee %
 cmap w!! w !sudo tee %
 
+" Turn it to hexeditor
+" Make a binary file to hexadecimal file
+cmap bin %!xxd
+
 " Map Ctrl-l to w (next word)
 map <c-l> w
 
