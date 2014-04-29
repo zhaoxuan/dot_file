@@ -1,3 +1,45 @@
+" ================= Vundle Start ==================================
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+
+" The following are examples of different formats supported.
+" Keep Plugin commands between vundle#begin/end.
+" =========== Bundle install plugins start
+Bundle 'derekwyatt/vim-scala'
+Bundle 'scrooloose/syntastic'
+" Snippet: start
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+Bundle "garbas/vim-snipmate"
+Bundle "honza/vim-snippets"
+" Snippet: end
+" =========== Bundle install plugins end
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList          - list configured plugins
+" :PluginInstall(!)    - install (update) plugins
+" :PluginSearch(!) foo - search (or refresh cache first) for foo
+" :PluginClean(!)      - confirm (or auto-approve) removal of unused plugins
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+" ================== Vundle End ======================================
+
 "用于设置自动格式化规则
 "t: 根据textwidth来自动换行
 "c: 如果是注释行，则根据textwidth自动换行，且在行首自动加注释标记
@@ -154,6 +196,7 @@ inoremap <expr> <CR>       pumvisible() ? "\<C-y>" : "\<CR>"
 " Description:Plugin that integrates ack with Vim
 "     :Ack search_string
 " ==========End==========
+
 
 
 
