@@ -21,6 +21,7 @@ Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
 Bundle "garbas/vim-snipmate"
 Bundle "honza/vim-snippets"
+Bundle "solarnz/thrift.vim"
 " Snippet: end
 " =========== Bundle install plugins end
 
@@ -196,7 +197,6 @@ inoremap <expr> <CR>       pumvisible() ? "\<C-y>" : "\<CR>"
 " Description:Plugin that integrates ack with Vim
 "     :Ack search_string
 " ==========End==========
-
 
 
 

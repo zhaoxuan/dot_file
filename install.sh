@@ -7,3 +7,4 @@ mkdir -p ~/.vim/
 cp -R ./colors ~/.vim/
 cp -R ./doc ~/.vim/
 cp -R ./plugin ~/.vim
+cp -R ./bundle ~/.vim
