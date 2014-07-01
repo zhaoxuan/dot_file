@@ -14,14 +14,22 @@ Plugin 'gmarik/Vundle.vim'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " =========== Bundle install plugins start
-Bundle 'derekwyatt/vim-scala'
-Bundle 'scrooloose/syntastic'
+Plugin 'derekwyatt/vim-scala'
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'scrooloose/syntastic'
+Plugin 'solarnz/thrift.vim'
+"Plugin 'mileszs/ack.vim'
+Plugin 'jlanzarotta/bufexplorer'
+Plugin 'tomasr/molokai'
+Plugin 'scrooloose/nerdcommenter'
+
+
+
 " Snippet: start
-Bundle "MarcWeber/vim-addon-mw-utils"
-Bundle "tomtom/tlib_vim"
-Bundle "garbas/vim-snipmate"
-Bundle "honza/vim-snippets"
-Bundle "solarnz/thrift.vim"
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
+Plugin 'honza/vim-snippets'
 " Snippet: end
 " =========== Bundle install plugins end
 
@@ -198,9 +206,19 @@ inoremap <expr> <CR>       pumvisible() ? "\<C-y>" : "\<CR>"
 "     :Ack search_string
 " ==========End==========
 
-
-
-
+" ==========Begin========
+" vim indent guides config
+"
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_auto_colors = 0
+let g:indent_guides_guide_size = 1
+"autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd ctermbg=235
+"autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=237
+"hi IndentGuidesOdd guibg=red ctermbg=235
+"hi IndentGuidesEven guibg=green ctermbg=237
+hi IndentGuidesOdd  ctermbg=235
+hi IndentGuidesEven ctermbg=237
+" ==========End==========
 
 
 

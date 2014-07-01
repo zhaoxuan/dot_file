@@ -4,7 +4,6 @@
 cp ./vimrc ~/.vimrc
 
 mkdir -p ~/.vim/
-cp -R ./colors ~/.vim/
+mkdir -p ~/.vim/bundle
+git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 cp -R ./doc ~/.vim/
-cp -R ./plugin ~/.vim
-cp -R ./bundle ~/.vim
