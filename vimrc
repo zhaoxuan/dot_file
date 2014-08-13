@@ -73,8 +73,14 @@ set t_Co=256
 
 "set number
 set cindent
-set expandtab
+
+" convert tab to spaces
+set noexpandtab
+
+" tab size
 set tabstop=4
+
+" << and >> use spaces
 set shiftwidth=4
 
 " set highlight current line
@@ -92,6 +98,7 @@ filetype indent on
 
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
+set fileencodings=utf-8,gbk,gb18030,utf-16,big5
 
 " Use Unix as the standard file type
 set ffs=unix,dos,mac
@@ -100,8 +107,8 @@ set ffs=unix,dos,mac
 set ignorecase
 
 " Force save current file with root permission
-" map <leader>sudosave :w !sudo tee %
-cmap w!! w !sudo tee %
+cmap <leader>sudosave :w !sudo tee %
+" cmap w!! w !sudo tee %
 
 " Turn it to hexeditor
 " Make a binary file to hexadecimal file
@@ -220,6 +227,10 @@ hi IndentGuidesOdd  ctermbg=235
 hi IndentGuidesEven ctermbg=237
 " ==========End==========
 
-
-
-
+" ==========Begin========
+" set tab size in different file
+autocmd FileType ruby set tabstop=2|set shiftwidth=2|set expandtab
+autocmd FileType python set tabstop=4|set shiftwidth=4|set expandtab
+autocmd FileType javascript set tabstop=2|set shiftwidth=2|set expandtab
+autocmd FileType scala set tabstop=2|set shiftwidth=2|set expandtab
+" ==========End==========
