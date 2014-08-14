@@ -71,13 +71,16 @@ colorscheme molokai
 " To enable 256 colors in vim
 set t_Co=256
 
+" Show line number
 "set number
+
+" C language indent
 set cindent
 
-" convert tab to spaces
+" Convert tab to spaces
 set noexpandtab
 
-" tab size
+" Tab size
 set tabstop=4
 
 " << and >> use spaces
