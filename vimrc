@@ -237,3 +237,34 @@ autocmd FileType python set tabstop=4|set shiftwidth=4|set expandtab
 autocmd FileType javascript set tabstop=2|set shiftwidth=2|set expandtab
 autocmd FileType scala set tabstop=2|set shiftwidth=2|set expandtab
 " ==========End==========
+
+
+" ==========Begin========
+" use list to show enter, tab, trail and so on
+" :set list 
+" :set nolist
+" eol = end of line
+" tab = tab
+" trail = comma at end of line
+" extends = I dont know
+" precedes = I dont know
+set listchars=eol:$,tab:>-,trail:.,extends:>,precedes:<
+" ==========End==========
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
