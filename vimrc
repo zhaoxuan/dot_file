@@ -20,15 +20,19 @@ Plugin 'scrooloose/syntastic'
 Plugin 'solarnz/thrift.vim'
 "Plugin 'mileszs/ack.vim'
 Plugin 'jlanzarotta/bufexplorer'
+" code color
 Plugin 'tomasr/molokai'
+" comment code
 Plugin 'scrooloose/nerdcommenter'
+" file template
+Plugin 'zhaoxuan/vim-template'
 
 
 
 " Snippet: start
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
-Plugin 'garbas/vim-snipmate'
+"Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'
 " Snippet: end
 " =========== Bundle install plugins end
@@ -252,9 +256,14 @@ set listchars=eol:$,tab:>-,trail:.,extends:>,precedes:<
 " ==========End==========
 
 
-
-
-
+" ==========Begin========
+" vim-template setting
+"let g:templates_plugin_loaded = 1 " to skip loading of this plugin.
+let g:templates_no_autocmd = 1 " to disable automatic insertion of template in new files.
+let g:templates_debug = 0 " to have vim-template output debug information
+let g:templates_fuzzy_start = 1 " to be able to name templates with implicit fuzzy matching at the start of a template name. For example a template file named template:.c would match test.cpp.
+"let g:templates_tr_in = [ '.', '_', '?' ]
+" ==========End==========
 
 
 
