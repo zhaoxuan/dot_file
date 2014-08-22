@@ -25,7 +25,7 @@ Plugin 'tomasr/molokai'
 " comment code
 Plugin 'scrooloose/nerdcommenter'
 " file template
-Plugin 'zhaoxuan/vim-template'
+Plugin 'aperezdc/vim-template'
 
 
 
@@ -265,6 +265,24 @@ let g:templates_fuzzy_start = 1 " to be able to name templates with implicit fuz
 "let g:templates_tr_in = [ '.', '_', '?' ]
 " ==========End==========
 
+
+
+" ==========Begin========
+" Foldmethod:
+" open or close code block
+" 
+" foldmethod option:
+" manual – folds must be defined by entering commands
+" indent – groups of lines with the same indent form a fold
+" syntax – folds are defined by syntax highlighting
+" expr – folds are defined by a user-defined expression
+" marker – special characters can be manually or automatically added to your text to flag the start and end of folds
+" diff – used to fold unchanged text when viewing differences
+"
+" :set foldmethod=manual
+"
+" zc: close code block
+" zo: open code block
 
 
 
