@@ -14,7 +14,7 @@ Plugin 'gmarik/Vundle.vim'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " =========== Bundle install plugins start
-Plugin 'derekwyatt/vim-scala'
+"Plugin 'derekwyatt/vim-scala'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'scrooloose/syntastic'
 Plugin 'solarnz/thrift.vim'
@@ -82,9 +82,9 @@ set t_Co=256
 set cindent
 
 " Convert tab to spaces
-set noexpandtab
+"set expandtab
 
-" Tab size
+" Default Tab size
 set tabstop=4
 
 " << and >> use spaces
@@ -114,12 +114,14 @@ set ffs=unix,dos,mac
 set ignorecase
 
 " Force save current file with root permission
-cmap <leader>sudosave :w !sudo tee %
+" command map :\w!! to w !sudo tee %
+cmap <Leader>w!! w !sudo tee %
 " cmap w!! w !sudo tee %
 
 " Turn it to hexeditor
 " Make a binary file to hexadecimal file
-cmap bin %!xxd
+"cmap bin %!xxd
+cmap <Leader>bin %!xxd
 
 " Map Ctrl-l to w (next word)
 map <c-l> w
@@ -235,15 +237,18 @@ hi IndentGuidesEven ctermbg=237
 " ==========End==========
 
 " ==========Begin========
+" Language Syntax:
 " set tab size in different file
 autocmd FileType ruby set tabstop=2|set shiftwidth=2|set expandtab
 autocmd FileType python set tabstop=4|set shiftwidth=4|set expandtab
 autocmd FileType javascript set tabstop=2|set shiftwidth=2|set expandtab
 autocmd FileType scala set tabstop=2|set shiftwidth=2|set expandtab
+autocmd FileType java set tabstop=4|set shiftwidth=4|set expandtab
 " ==========End==========
 
 
 " ==========Begin========
+" List:
 " use list to show enter, tab, trail and so on
 " :set list 
 " :set nolist
@@ -257,6 +262,7 @@ set listchars=eol:$,tab:>-,trail:.,extends:>,precedes:<
 
 
 " ==========Begin========
+" Template:
 " vim-template setting
 "let g:templates_plugin_loaded = 1 " to skip loading of this plugin.
 let g:templates_no_autocmd = 1 " to disable automatic insertion of template in new files.
@@ -283,8 +289,6 @@ let g:templates_fuzzy_start = 1 " to be able to name templates with implicit fuz
 "
 " zc: close code block
 " zo: open code block
-
-
 
 
 
