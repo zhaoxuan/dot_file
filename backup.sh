@@ -12,6 +12,7 @@ OS=`uname -s`
 echo 'backup vimrc'
 cp $HOME/.vimrc $DIR/vimrc
 
+echo 'Backup bash profile'
 if [ $OS == 'Darwin' ];then
 	echo 'OS is Macintosh'
 	echo 'Backup bash_profile'
@@ -23,3 +24,6 @@ else
 	cp $HOME/.bashrc $DIR/linux_bashrc
 	echo 'Backup Linux Success!'
 fi
+
+echo 'Backup git config'
+cp $HOME/.gitconfig $DIR/gitconfig
