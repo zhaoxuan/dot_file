@@ -14,10 +14,11 @@ Plugin 'gmarik/Vundle.vim'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " =========== Bundle install plugins start
-"Plugin 'derekwyatt/vim-scala'
+Plugin 'derekwyatt/vim-scala'
 Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'scrooloose/syntastic'
 Plugin 'solarnz/thrift.vim'
+" check syntax error
+"Plugin 'scrooloose/syntastic'
 "Plugin 'mileszs/ack.vim'
 Plugin 'jlanzarotta/bufexplorer'
 " code color
@@ -32,7 +33,7 @@ Plugin 'aperezdc/vim-template'
 " Snippet: start
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
-"Plugin 'garbas/vim-snipmate'
+Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'
 " Snippet: end
 " =========== Bundle install plugins end
@@ -244,6 +245,8 @@ autocmd FileType python set tabstop=4|set shiftwidth=4|set expandtab
 autocmd FileType javascript set tabstop=2|set shiftwidth=2|set expandtab
 autocmd FileType scala set tabstop=2|set shiftwidth=2|set expandtab
 autocmd FileType java set tabstop=4|set shiftwidth=4|set expandtab
+autocmd FileType cpp set tabstop=2|set shiftwidth=2|set expandtab
+autocmd FileType make set noexpandtab
 " ==========End==========
 
 
@@ -258,6 +261,7 @@ autocmd FileType java set tabstop=4|set shiftwidth=4|set expandtab
 " extends = I dont know
 " precedes = I dont know
 set listchars=eol:$,tab:>-,trail:.,extends:>,precedes:<
+"cmap <Leader>lschars 'set listchars=eol:$,tab:>-,trail:.,extends:>,precedes:<'
 " ==========End==========
 
 

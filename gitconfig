@@ -12,9 +12,13 @@
 	st = status -sb
 	cm = commit
 	df = diff
-    co = checkout
-    br = branch
+	co = checkout
+	br = branch
+	d = difftool
+	lp = log --pretty=oneline
 [core]
 	autocrlf = input
 	excludesfile = /Users/john/.gitignore_global
 	editor = vim
+[diff]
+	tool = vimdiff

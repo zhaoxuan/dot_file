@@ -1,13 +1,18 @@
+if [ -f $(brew --prefix)/share/bash-completion/bash_completion ]; then
+	. $(brew --prefix)/share/bash-completion/bash_completion
+fi
 # set locale to utf-8
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 ### some command for johnself
 export PATH=/Users/john/opt/bin:$PATH
-#############################
+#export GOPATH=/Users/john/workspaces/go
+export SVN_EDITOR=vim
 
 ### alias begin
 alias ll='ls -l'
+#alias ..='cd ..'
 #alias kails='ps -ef | grep "ruby script/server" | grep -v grep|cut -c 7-11|xargs kill -9'
 alias rvm1='rvm use 1.8.7 && rvm gemset use gem187'
 #alias rvm2='rvm use 1.9.2 && rvm gemset use r9'
@@ -19,28 +24,40 @@ alias sublime='open -a "Sublime Text 2"'
 alias mou='open -a Mou'
 alias relay='ssh zhaoxuan02@relay01.baidu.com'
 alias pi='ssh john@pi'
+alias cal='/usr/bin/cal | grep -E --color "(\b|^)`date "+%e" |sed "s/\ //"`\b|$"'
+#alias cpufrq='cat /sys/devices/system/cpu/cpu0/cpufreq/cpuinfo_cur_freq' # only linux
+#alias temp='cat /sys/class/thermal/thermal_zone0/temp' # only linux
 #alias workspaces='cd ~/workspaces'
-### alias end
+#alias flushdns='dscacheutil -flushcache'
 
+# for postgresql
+alias postgres.server='postgres -D /usr/local/var/postgres'
 
+# grep
+alias grep='grep --color=always --ignore-case '
+
+# kafka
+alias kafka_start='kafka-server-start.sh /usr/local/etc/kafka/server.properties'
 
 ### pbcopy pbpaste
 #alias pw='printf "C10udinSky*" | pbcopy'
+alias pw='printf "zx19880427" | pbcopy'
 
 ### start java config
-export JAVA_6_HOME=$(/usr/libexec/java_home -v1.6)
+#export JAVA_6_HOME=$(/usr/libexec/java_home -v1.6)
 export JAVA_7_HOME=$(/usr/libexec/java_home -v1.7)
-export JAVA_8_HOME=$(/usr/libexec/java_home -v1.8)
+#export JAVA_8_HOME=$(/usr/libexec/java_home -v1.8)
 
-alias java6='export JAVA_HOME=$JAVA_6_HOME'
-alias java7='export JAVA_HOME=$JAVA_7_HOME'
-alias java8='export JAVA_HOME=$JAVA_8_HOME'
+#alias java6='export JAVA_HOME=$JAVA_6_HOME; export PATH=$JAVA_HOME/bin:$PATH'
+alias java7='export JAVA_HOME=$JAVA_7_HOME; export PATH=$JAVA_HOME/bin:$PATH'
+#alias java8='export JAVA_HOME=$JAVA_8_HOME; export PATH=$JAVA_HOME/bin:$PATH'
 
-export JAVA_HOME=$JAVA_6_HOME
+export JAVA_HOME=$JAVA_7_HOME
 export PATH=$JAVA_HOME/bin:$PATH
+
+# maven options
+export MAVEN_OPTS="-Xmx1024m -XX:MaxPermSize=128M"
 ### end java config
-
-
 
 ### hadoop pig hive start
 #export HADOOP_PREFIX=/Users/john/opt/hadoop
@@ -69,12 +86,6 @@ function git_branch {
 
 # \h:\W \u\$
 export PS1="\[\033[01;33m\]\u@\h \[\033[1;32m\]\$(git_branch)\[\033[01;31m\]\W\$\[\033[00m\] "
-
-# for postgresql
-alias postgres.server='postgres -D /usr/local/var/postgres'
-
-# grep
-alias grep='grep --color=always --ignore-case '
 
 # brew path
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
