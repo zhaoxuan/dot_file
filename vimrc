@@ -247,6 +247,7 @@ autocmd FileType scala set tabstop=2|set shiftwidth=2|set expandtab
 autocmd FileType java set tabstop=4|set shiftwidth=4|set expandtab
 autocmd FileType cpp set tabstop=2|set shiftwidth=2|set expandtab
 autocmd FileType make set noexpandtab
+autocmd FileType xml set tabstop=4|set shiftwidth=4|set expandtab
 " ==========End==========
 
 
