@@ -1,19 +1,20 @@
+# homebrew
 if [ -f $(brew --prefix)/share/bash-completion/bash_completion ]; then
 	. $(brew --prefix)/share/bash-completion/bash_completion
 fi
+export HOMEBREW_GITHUB_API_TOKEN=9160d2f66a1bb1b73e65c082682ec5ce269bed36
 # set locale to utf-8
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 ### some command for johnself
 export PATH=/Users/john/opt/bin:$PATH
-#export GOPATH=/Users/john/workspaces/go
+export GOPATH=/Users/john/workspaces/go
 export SVN_EDITOR=vim
 
 ### alias begin
 alias ll='ls -l'
 #alias ..='cd ..'
-#alias kails='ps -ef | grep "ruby script/server" | grep -v grep|cut -c 7-11|xargs kill -9'
 alias rvm1='rvm use 1.8.7 && rvm gemset use gem187'
 #alias rvm2='rvm use 1.9.2 && rvm gemset use r9'
 alias rvm3='rvm use 1.9.3 && rvm gemset use r9'
@@ -22,13 +23,16 @@ alias rvm3='rvm use 1.9.3 && rvm gemset use r9'
 alias rvmb='rvm use 1.9.3 && rvm gemset use blog'
 alias sublime='open -a "Sublime Text 2"'
 alias mou='open -a Mou'
-alias relay='ssh zhaoxuan02@relay01.baidu.com'
+#alias relay='ssh zhaoxuan02@relay01.baidu.com'
+alias relay="ssh -p 3222 'xuan.zhao@192.168.61.15:3222'@192.168.61.9"
 alias pi='ssh john@pi'
-alias cal='/usr/bin/cal | grep -E --color "(\b|^)`date "+%e" |sed "s/\ //"`\b|$"'
+#alias cal='/usr/bin/cal | grep -E --color "(\b|^)`date "+%e" |sed "s/\ //"`\b|$"'
 #alias cpufrq='cat /sys/devices/system/cpu/cpu0/cpufreq/cpuinfo_cur_freq' # only linux
 #alias temp='cat /sys/class/thermal/thermal_zone0/temp' # only linux
 #alias workspaces='cd ~/workspaces'
 #alias flushdns='dscacheutil -flushcache'
+alias svnserver='/usr/local/bin/svnserve -r /usr/local/var/svn/repositories --log-file=/usr/local/var/log/svn.log --listen-once'
+alias redis-server='/usr/local/bin/redis28-server /usr/local/etc/redis.conf'
 
 # for postgresql
 alias postgres.server='postgres -D /usr/local/var/postgres'
@@ -41,7 +45,8 @@ alias kafka_start='kafka-server-start.sh /usr/local/etc/kafka/server.properties'
 
 ### pbcopy pbpaste
 #alias pw='printf "C10udinSky*" | pbcopy'
-alias pw='printf "zx19880427" | pbcopy'
+alias pw='printf "!@#qwe123" | pbcopy'
+alias pw1='printf "zx19880427" | pbcopy'
 
 ### start java config
 #export JAVA_6_HOME=$(/usr/libexec/java_home -v1.6)
@@ -54,9 +59,10 @@ alias java7='export JAVA_HOME=$JAVA_7_HOME; export PATH=$JAVA_HOME/bin:$PATH'
 
 export JAVA_HOME=$JAVA_7_HOME
 export PATH=$JAVA_HOME/bin:$PATH
+export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar 
 
 # maven options
-export MAVEN_OPTS="-Xmx1024m -XX:MaxPermSize=128M"
+export MAVEN_OPTS="-Xmx2g -XX:MaxPermSize=512M -XX:ReservedCodeCacheSize=512m"
 ### end java config
 
 ### hadoop pig hive start
@@ -78,12 +84,6 @@ function git_branch {
     echo "("${ref#refs/heads/}") ";
 }
 
-# show ruby version
-#function ruby_v(){
-#    ref=$(ruby -v|cut -c 6-10)||return;
-#    echo "("${ref}") ";
-#}
-
 # \h:\W \u\$
 export PS1="\[\033[01;33m\]\u@\h \[\033[1;32m\]\$(git_branch)\[\033[01;31m\]\W\$\[\033[00m\] "
 
@@ -97,6 +97,3 @@ eval "$(pyenv init -)"
 
 # for rvm
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
-
-
