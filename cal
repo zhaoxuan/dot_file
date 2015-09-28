@@ -1,0 +1,5 @@
+if [ $# -eq 0 ];then
+    /usr/bin/cal $@ | grep -E --color "(\b|^)`date "+%e" |sed "s/\ //"`\b|$"
+else
+    /usr/bin/cal $@
+fi
