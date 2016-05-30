@@ -14,9 +14,9 @@ Plugin 'gmarik/Vundle.vim'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " =========== Bundle install plugins start
-Plugin 'derekwyatt/vim-scala'
+"Plugin 'derekwyatt/vim-scala'
 Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'solarnz/thrift.vim'
+"Plugin 'solarnz/thrift.vim'
 " check syntax error
 "Plugin 'scrooloose/syntastic'
 "Plugin 'mileszs/ack.vim'
@@ -28,6 +28,8 @@ Plugin 'scrooloose/nerdcommenter'
 " file template
 Plugin 'aperezdc/vim-template'
 
+" airline simple status line
+Plugin 'bling/vim-airline'
 
 
 " Snippet: start
@@ -69,7 +71,8 @@ filetype plugin indent on    " required
 "l: 在插入模式下不换行
 "默认值为tcq
 set formatoptions=tcqmM
-
+" set airline status
+set laststatus=2
 syntax on
 colorscheme molokai
 
@@ -82,8 +85,11 @@ set t_Co=256
 " C language indent
 set cindent
 
+" according to other tab to set tab type
+set smarttab
+
 " Convert tab to spaces
-"set expandtab
+set expandtab
 
 " Default Tab size
 set tabstop=4
@@ -121,7 +127,7 @@ cmap <Leader>w!! w !sudo tee %
 
 " Turn it to hexeditor
 " Make a binary file to hexadecimal file
-"cmap bin %!xxd
+" Command cmap :\bin %!xxd
 cmap <Leader>bin %!xxd
 
 " Map Ctrl-l to w (next word)
@@ -244,10 +250,11 @@ autocmd FileType ruby set tabstop=2|set shiftwidth=2|set expandtab
 autocmd FileType python set tabstop=4|set shiftwidth=4|set expandtab
 autocmd FileType javascript set tabstop=2|set shiftwidth=2|set expandtab
 autocmd FileType scala set tabstop=2|set shiftwidth=2|set expandtab
-autocmd FileType java set tabstop=4|set shiftwidth=4|set expandtab
+autocmd FileType java set tabstop=2|set shiftwidth=2|set expandtab
 autocmd FileType cpp set tabstop=2|set shiftwidth=2|set expandtab
-autocmd FileType make set noexpandtab
+autocmd FileType make set tabstop=4|set shiftwidth=4|set noexpandtab
 autocmd FileType xml set tabstop=4|set shiftwidth=4|set expandtab
+autocmd FileType go set tabstop=4|set shiftwidth=4|set noexpandtab
 " ==========End==========
 
 
@@ -267,13 +274,16 @@ set listchars=eol:$,tab:>-,trail:.,extends:>,precedes:<
 
 
 " ==========Begin========
-" Template:
+" Template Plugin:
 " vim-template setting
 "let g:templates_plugin_loaded = 1 " to skip loading of this plugin.
 let g:templates_no_autocmd = 1 " to disable automatic insertion of template in new files.
 let g:templates_debug = 0 " to have vim-template output debug information
 let g:templates_fuzzy_start = 1 " to be able to name templates with implicit fuzzy matching at the start of a template name. For example a template file named template:.c would match test.cpp.
 "let g:templates_tr_in = [ '.', '_', '?' ]
+let g:license = "BSD"
+let g:mail = "zhaoxuan1727@gmail.com"
+
 " ==========End==========
 
 
